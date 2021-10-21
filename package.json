@@ -1,0 +1,28 @@
+{
+  "name": "emotional_awareness",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "taka61 <taka.tennisloveup61@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taka61/emotional_awareness.git"
+  },
+  "keywords": [
+    "emotion",
+    "quote"
+  ],
+  "bugs": {
+    "url": "https://github.com/taka61/emotional_awareness/issues"
+  },
+  "homepage": "https://github.com/taka61/emotional_awareness#readme",
+  "description": "",
+  "dependencies": {
+    "date-utils": "^1.2.21",
+    "enquirer": "^2.3.6",
+    "minimist": "^1.2.5"
+  }
+}
