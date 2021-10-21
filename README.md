@@ -1,10 +1,10 @@
 # emotional_awareness
-You can be aware of your feelings quickly to use the “emotional_awareness”.
-It is like a super simple app that records your emotions.
-We are often asked someone ‘how are you?’, and almost people say ‘I’m good or fine’.
-However, Does it really mean?
-You can choose your real feelings through this npm, and it gives you a word that is written by English or Japanese according to your emotions.
-I chose those words for me, so those may not suit you. Although I hope you enjoy it👋.
+You can be aware of your feelings quickly to use the “emotional_awareness”.<br>
+It is like a super simple app that records your emotions.<br>
+We are often asked someone ‘how are you?’, and almost people say ‘I’m good or fine’.<br>
+However, Does it really mean?<br>
+You can choose your real feelings through this npm, and it gives you a word that is written by English or Japanese according to your emotions.<br>
+I chose those words for me, so those may not suit you. Although I hope you enjoy it👋.<br>
 
 # Install
 `$ npm install emotional_awareness`
