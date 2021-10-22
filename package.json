@@ -1,6 +1,6 @@
 {
   "name": "emotional_awareness",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "main": "index.js",
   "bin": {
     "emotional_awareness": "index.js"
