@@ -28,7 +28,7 @@ const choseMyFeeling = () => {
     console.log('そんなあなたに今日の言葉を届けます〜👀')
 
     if (`${answer1.feeling}` === '😄') {
-      const words = fs.readFileSync('__dirname + /quotes/a.txt', 'utf-8')
+      const words = fs.readFileSync('__dirname + quotes/a.txt', 'utf-8')
       const word = words.split('/')
       const phrases = word.slice(0, 14)
       const x = Math.floor(Math.random() * phrases.length)
