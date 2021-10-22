@@ -28,25 +28,25 @@ const choseMyFeeling = () => {
     console.log('そんなあなたに今日の言葉を届けます〜👀')
 
     if (`${answer1.feeling}` === '😄') {
-      const words = fs.readFileSync(__dirname + 'quotes/a.txt', 'utf-8')
+      const words = fs.readFileSync(__dirname + '/quotes/a.txt', 'utf-8')
       const word = words.split('/')
       const phrases = word.slice(0, 14)
       const x = Math.floor(Math.random() * phrases.length)
       setTimeout(() => console.log(phrases[x]), 1000)
     } else if (`${answer1.feeling}` === '🙂') {
-      const words = fs.readFileSync(__dirname + 'quotes/b.txt', 'utf-8')
+      const words = fs.readFileSync(__dirname + '/quotes/b.txt', 'utf-8')
       const word = words.split('/')
       const phrases = word.slice(0, 14)
       const x = Math.floor(Math.random() * phrases.length)
       setTimeout(() => console.log(phrases[x]), 1000)
     } else if (`${answer1.feeling}` === '🙁') {
-      const words = fs.readFileSync(__dirname + 'quotes/c.txt', 'utf-8')
+      const words = fs.readFileSync(__dirname + '/quotes/c.txt', 'utf-8')
       const word = words.split('/')
       const phrases = word.slice(0, 14)
       const x = Math.floor(Math.random() * phrases.length)
       setTimeout(() => console.log(phrases[x]), 1000)
     } else {
-      const words = fs.readFileSync(__dirname + 'quotes/d.txt', 'utf-8')
+      const words = fs.readFileSync(__dirname + '/quotes/d.txt', 'utf-8')
       const word = words.split('/')
       const phrases = word.slice(0, 14)
       const x = Math.floor(Math.random() * phrases.length)
@@ -64,7 +64,7 @@ const saveMyFeeling = () => {
       choices: Feeling
     }
     const answer2 = await Enquirer.prompt(question2)
-    fs.writeFileSync(__dirname + `${format}.txt`, `${format}の気分: ${answer2.feeling}`)
+    fs.writeFileSync(__dirname + `/records/${format}.txt`, `${format}の気分: ${answer2.feeling}`)
 
     const question3 = {
       type: 'select',
@@ -83,7 +83,7 @@ const saveMyFeeling = () => {
         output: process.stdout
       })
       reader.on('line', (input) => {
-        fs.appendFile(__dirname + `${format}.txt`, '\n' + input, (err) => {
+        fs.appendFile(__dirname + `/records/${format}.txt`, '\n' + input, (err) => {
           if (err) throw err
           console.log(`『${input}』を保存しました`)
         })
