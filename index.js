@@ -3,6 +3,7 @@
 const Enquirer = require('enquirer')
 const fs = require('fs')
 const argv = require('minimist')(process.argv.slice(2))
+const userHome = process.env[process.platform === 'win32' ? 'USERPROFILE' : 'HOME']
 require('date-utils')
 
 const dt = new Date()
@@ -64,7 +65,14 @@ const saveMyFeeling = () => {
       choices: Feeling
     }
     const answer2 = await Enquirer.prompt(question2)
-    fs.writeFileSync(__dirname + `/records/${format}.txt`, `${format}の気分: ${answer2.feeling}`)
+
+    if (!fs.existsSync(`${userHome}/emotional_awareness`)) {
+      fs.mkdirSync(`${userHome}/emotional_awareness`)
+    } else {
+      return
+    }
+
+    fs.writeFileSync(`${userHome}/emotional_awareness/${format}.txt`, `${format}の気分: ${answer2.feeling}`)
 
     const question3 = {
       type: 'select',
@@ -83,7 +91,7 @@ const saveMyFeeling = () => {
         output: process.stdout
       })
       reader.on('line', (input) => {
-        fs.appendFile(__dirname + `/records/${format}.txt`, '\n' + input, (err) => {
+        fs.appendFile(`${userHome}/emotional_awareness/${format}.txt`, '\n' + input, (err) => {
           if (err) throw err
           console.log(`『${input}』を保存しました`)
         })
