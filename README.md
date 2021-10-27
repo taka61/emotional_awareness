@@ -9,8 +9,7 @@ I chose those words for me, so those may not suit you. Although I hope you enjoy
 # Install
 `$ npm install emotional_awareness`
 
-<note>
-emotional_awareness directory will be created in your home directory.
+Please note that emotional_awareness directory will be created in your home directory.<br>
 And when you choose save option, your daily feelings will be stored in this directory.
 
 
